@@ -72,7 +72,7 @@ const Index: NextPage = (props: any) => {
                       className="mt-6 bg-main p-3 rounded-md flex flex-col items-center justify-center text-white font-semibold"
                     >
                       <BsEnvelope className="text-2xl" />
-                      <span>Open Invaitation</span>
+                      <span>Open Invitation</span>
                     </button>
                   </div>
                 </div>
