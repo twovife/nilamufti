@@ -214,14 +214,19 @@ const Resepsi = () => {
             id="maps"
             className="text-center w-full mb-12"
           >
-            <button className="mb-12 px-3 mx-auto py-1.5 rounded-md bg-main flex items-center justify-center ring ring-emerald-600 hover:bg-emerald-600 text-white font-semibold">
+            <button
+              onClick={() =>
+                window.open("https://goo.gl/maps/3UGEEWpV8CtUj3mJ6", "_blank")
+              }
+              className="mb-12 px-3 mx-auto py-1.5 rounded-md bg-main flex items-center justify-center ring ring-emerald-600 hover:bg-emerald-600 text-white font-semibold"
+            >
               <SiGooglemaps className="lg:text-2xl mr-3" />
               <span className="lg:text-2xl">Open Maps</span>
             </button>
             <button
               onClick={() =>
                 window.open(
-                  "https://wa.me/681233302284?text=Halo%20Besti%2C%20Selamat%20ya%2C%20aku%20pasti%20datang%20diacaramu",
+                  "https://wa.me/6287848727818?text=Halo%20Besti%2C%20Selamat%20ya%2C%20aku%20pasti%20datang%20diacaramu",
                   "_blank"
                 )
               }

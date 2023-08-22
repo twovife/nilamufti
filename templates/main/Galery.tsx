@@ -78,9 +78,15 @@ const Galery = () => {
             style={{ paddingBottom: "56.25%", position: "relative" }}
           >
             <YouTube
-              videoId="fbd6lsLV_3k"
+              videoId="gBf5Ne9_mdE"
               className="absolute top-0 left-0 w-full h-full bg-red-400"
-              opts={{ width: "100%", height: "100%" }}
+              opts={{
+                playerVars: {
+                  mute: 1, // Auto mute the video
+                },
+                width: "100%",
+                height: "100%",
+              }}
               // onStateChange={onPlayerStateChange}
               // ref={playerRef}
             />

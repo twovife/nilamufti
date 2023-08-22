@@ -3,6 +3,7 @@ import ButtonCopy from "@/components/ButtonCopy";
 import { motion } from "framer-motion";
 import bca from "../public/bca.png";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 interface GiftModalProps {
   isShow: boolean;
@@ -10,7 +11,9 @@ interface GiftModalProps {
 }
 
 const GiftModal: React.FC<GiftModalProps> = ({ isShow, setIsShow }) => {
-  console.log(isShow);
+  const router = useRouter();
+  const { own } = router.query;
+  const numbers = own ? parseInt(own as string, 10) : 1;
 
   const [isVisible, setIsVisible] = useState(isShow);
 
@@ -48,12 +51,21 @@ const GiftModal: React.FC<GiftModalProps> = ({ isShow, setIsShow }) => {
           Rasa terima kasih kami tulus untuk hadiah dan doa kalian. Momen ini
           menjadi lebih berarti berkat kehadiran dan cinta yang kalian bagikan.
         </div>
-        <div className="text-center">
-          <Image alt="logo bca" src={bca} width={100} className="mx-auto" />
-          <p>0332556337</p>
-          <p>a/n Sidhi Mufti Alarif Santoso</p>
-          <ButtonCopy dataValue="0332556337" />
-        </div>
+        {numbers === 2 ? (
+          <div className="text-center">
+            <Image alt="logo bca" src={bca} width={100} className="mx-auto" />
+            <p>0332556337</p>
+            <p>a/n MUGIK SANTOSO</p>
+            <ButtonCopy dataValue="8240425549" />
+          </div>
+        ) : (
+          <div className="text-center">
+            <Image alt="logo bca" src={bca} width={100} className="mx-auto" />
+            <p>0332556337</p>
+            <p>a/n Sidhi Mufti Alarif Santoso</p>
+            <ButtonCopy dataValue="0332556337" />
+          </div>
+        )}
       </div>
     </motion.div>
   );

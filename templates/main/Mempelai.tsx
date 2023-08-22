@@ -159,7 +159,7 @@ const Mempelai = () => {
         <div className="text-xl lg:text-2xl mb-6">
           <p className="mb-3">Putri Pertama dari</p>
           <p className="text-2xl lg:text-3xl">
-            Bapak Gumik Santoso & Ibu Ami Lestari (Almh)
+            Bapak Mugik Santoso & Ibu Ami Lestari (Almh)
           </p>
         </div>
         <Image

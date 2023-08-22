@@ -40,7 +40,7 @@ const Index: NextPage = (props: any) => {
         />
         <meta property="og:site_name" content="Undangan Pernikahan" />
 
-        <meta property="og:image" content="../main.jpg" />
+        <meta property="og:image" content="/main.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
       </Head>
@@ -93,6 +93,7 @@ const Index: NextPage = (props: any) => {
                 <Image
                   alt="flower"
                   src={bggalery}
+                  loading="eager"
                   className="absolute z-0 w-full h-full object-cover"
                 />
                 <Image
