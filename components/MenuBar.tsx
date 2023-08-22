@@ -1,11 +1,14 @@
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import icon1 from "../public/icon1.png";
 import icon2 from "../public/icon2.png";
 import icon3 from "../public/icon3.png";
 import icon4 from "../public/icon4.png";
 import icon5 from "../public/icon5.png";
 import icon6 from "../public/icon6.png";
+import play from "../public/play.png";
+import paused from "../public/paused.png";
+// import lagu from "../public/lagu.mp3";
 import { motion, useInView } from "framer-motion";
 
 const MenuBar = () => {
@@ -44,7 +47,35 @@ const MenuBar = () => {
     },
   };
 
-  console.log(isMenuInView);
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState<boolean>(true);
+
+  useEffect(() => {
+    const newAudio = new Audio("../lagu2.mp3");
+    newAudio.preload = "auto";
+    newAudio.onloadeddata = () => {
+      setAudio(newAudio);
+    };
+    return () => {
+      if (audio) {
+        audio.pause();
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (audio) {
+      if (isPlaying) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  }, [audio, isPlaying]);
+
+  const toggleAudio = () => {
+    setIsPlaying(!isPlaying);
+  };
 
   return (
     <div
@@ -120,12 +151,12 @@ const MenuBar = () => {
         </motion.button>
         <motion.button
           variants={listItem}
-          onClick={() => handleClick("home")}
+          onClick={toggleAudio}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="flex-1"
         >
-          <Image src={icon1} alt="icon 1" />
+          <Image src={isPlaying ? paused : play} alt="icon 1" />
         </motion.button>
       </motion.div>
     </div>
