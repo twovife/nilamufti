@@ -27,6 +27,7 @@ const Index: NextPage = (props: any) => {
 
   const router = useRouter();
   const toParam = router.query?.to;
+
   return (
     <>
       <Head>
@@ -39,8 +40,8 @@ const Index: NextPage = (props: any) => {
         <meta property="og:locale" content="id_ID" />
         <meta property="og:site_name" content="Undangan Pernikahan" />
         <meta property="og:image" content="/main.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="500" />
       </Head>
       <div className="relative">
         <AnimatePresence>
