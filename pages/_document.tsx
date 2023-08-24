@@ -13,7 +13,7 @@ export default class Document extends NextDocument {
             name="description"
             content="Selamat datang di undangan pernikahan kami! Bergabunglah dengan kami dalam momen istimewa ini saat kami merayakan cinta dan kebahagiaan. Tanggal, waktu, dan tempat telah kami persiapkan dengan penuh kasih untuk Anda."
           />
-          <meta property="og:type" content="website" />{" "}
+          <meta property="og:type" content="website" />
           <meta
             property="og:description"
             content="Selamat datang di undangan pernikahan kami! Bergabunglah dengan kami dalam momen istimewa ini saat kami merayakan cinta dan kebahagiaan. Tanggal, waktu, dan tempat telah kami persiapkan dengan penuh kasih untuk Anda."
@@ -24,8 +24,14 @@ export default class Document extends NextDocument {
           ></meta>
           <meta property="og:locale" content="id_ID" />
           <meta property="og:site_name" content="Undangan Pernikahan" />
-          <meta property="og:image" content="../public/main2.jpg" />
-          <meta property="twitter:image" content="../public/main2.jpg"></meta>
+          <meta
+            property="og:image"
+            content={process.env.PUBLIC_URL + "/main2.jpg"}
+          />
+          <meta
+            property="twitter:image"
+            content={process.env.PUBLIC_URL + "/main2.jpg"}
+          />
           <meta property="twitter:card" content="summary_large_image"></meta>
           <meta
             property="twitter:title"
