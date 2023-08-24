@@ -1,4 +1,6 @@
 import NextDocument, { Html, Head, Main, NextScript } from "next/document";
+import main2 from "../public/main2.jpg";
+
 export default class Document extends NextDocument {
   render() {
     return (
@@ -24,14 +26,8 @@ export default class Document extends NextDocument {
           ></meta>
           <meta property="og:locale" content="id_ID" />
           <meta property="og:site_name" content="Undangan Pernikahan" />
-          <meta
-            property="og:image"
-            content={process.env.PUBLIC_URL + "/main2.jpg"}
-          />
-          <meta
-            property="twitter:image"
-            content={process.env.PUBLIC_URL + "/main2.jpg"}
-          />
+          <meta property="og:image" content={"../public/main2.jpg"} />
+          <meta property="twitter:image" content={"../public/main2.jpg"} />
           <meta property="twitter:card" content="summary_large_image"></meta>
           <meta
             property="twitter:title"
