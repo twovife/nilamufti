@@ -9,6 +9,7 @@ import bggalery from "../public/bggalery.jpg";
 import Image from "next/image";
 import { Parisienne } from "next/font/google";
 import { BsEnvelope } from "react-icons/bs";
+import { useRouter } from "next/router";
 
 const parisienne = Parisienne({
   weight: "400",
@@ -24,6 +25,8 @@ const Index: NextPage = (props: any) => {
     setIsCoverVisible(false);
   };
 
+  const router = useRouter();
+  const toParam = router.query?.to;
   return (
     <>
       <Head>
@@ -34,12 +37,7 @@ const Index: NextPage = (props: any) => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="id_ID" />
-        <meta
-          property="og:url"
-          content="https://www.contohundanganpernikahan.com"
-        />
         <meta property="og:site_name" content="Undangan Pernikahan" />
-
         <meta property="og:image" content="/main.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -79,7 +77,7 @@ const Index: NextPage = (props: any) => {
                     </p>
 
                     <p className="font-light text-white text-2xl">
-                      {props.searchParams?.to ?? "My Best Friend"}
+                      {toParam ?? "My Best Friend"}
                     </p>
                     <button
                       onClick={handleCoverClick}
