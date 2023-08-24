@@ -26,8 +26,14 @@ export default class Document extends NextDocument {
           ></meta>
           <meta property="og:locale" content="id_ID" />
           <meta property="og:site_name" content="Undangan Pernikahan" />
-          <meta property="og:image" content="main2.jpg" />
-          <meta property="twitter:image" content="main2.jpg" />
+          <meta
+            property="og:image"
+            content="https://nilamufti.vercel.app/main2.jpg"
+          />
+          <meta
+            property="twitter:image"
+            content="https://nilamufti.vercel.app/main2.jpg"
+          />
           <meta property="twitter:card" content="summary_large_image"></meta>
           <meta
             property="twitter:title"
