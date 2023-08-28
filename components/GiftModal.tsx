@@ -54,7 +54,7 @@ const GiftModal: React.FC<GiftModalProps> = ({ isShow, setIsShow }) => {
         {numbers === 2 ? (
           <div className="text-center">
             <Image alt="logo bca" src={bca} width={100} className="mx-auto" />
-            <p>8240425549</p>
+            <p>0332556337</p>
             <p>a/n MUGIK SANTOSO</p>
             <ButtonCopy dataValue="8240425549" />
           </div>
