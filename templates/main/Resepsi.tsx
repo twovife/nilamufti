@@ -18,6 +18,7 @@ import {
 import { Abril_Fatface, Questrial } from "next/font/google";
 import GiftModal from "@/components/GiftModal";
 import CutdownTimer from "@/components/CutdownTimer";
+import { useRouter } from "next/router";
 
 const questrial = Questrial({
   weight: "400",
@@ -59,6 +60,10 @@ const singleAnimation = {
     },
   },
 };
+
+const router = useRouter();
+const { own } = router.query;
+const numbers = own ? parseInt(own as string, 10) : 1;
 
 const Resepsi = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -155,7 +160,11 @@ const Resepsi = () => {
             >
               Resepsi
             </h1>
-            <p className="lg:text-xl">Pukul 15:00 - Selesai</p>
+            {numbers == 2 ? (
+              <p className="lg:text-xl">Pukul 12:00 - 15:00</p>
+            ) : (
+              <p className="lg:text-xl">Pukul 15:00 - Selesai</p>
+            )}
           </motion.div>
           <motion.div
             variants={singleAnimation}
@@ -189,8 +198,17 @@ const Resepsi = () => {
                 <AiOutlineClockCircle className="w-10 lg:w-16 h-10 lg:h-16" />
               </div>
               <div className="text-center">
-                <p>15:00 WIB</p>
-                <p className="whitespace-nowrap">s/d Selesai</p>
+                {numbers == 2 ? (
+                  <>
+                    <p>12:00 WIB</p>
+                    <p className="whitespace-nowrap">s/d 15:00</p>
+                  </>
+                ) : (
+                  <p>
+                    <p>15:00 WIB</p>
+                    <p className="whitespace-nowrap">s/d Selesai</p>
+                  </>
+                )}
               </div>
             </div>
             <div className="col-span-2 flex flex-col justify-center items-center">
