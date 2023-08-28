@@ -204,7 +204,7 @@ const Resepsi = () => {
                     <p className="whitespace-nowrap">s/d 15:00</p>
                   </>
                 ) : (
-                  <p>
+                  <>
                     <p>15:00 WIB</p>
                     <p className="whitespace-nowrap">s/d Selesai</p>
                   </>
