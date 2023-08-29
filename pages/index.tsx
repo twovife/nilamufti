@@ -27,6 +27,7 @@ const Index: NextPage = (props: any) => {
 
   const router = useRouter();
   const toParam = router.query?.to;
+  const own = router.query?.own ?? "1";
 
   return (
     <>
@@ -105,7 +106,7 @@ const Index: NextPage = (props: any) => {
               exit={{ opacity: 0, display: "none" }}
               transition={{ duration: 1, damping: 25 }}
             >
-              <MainUndangan />
+              <MainUndangan own={own} />
             </motion.div>
           )}
         </AnimatePresence>

@@ -6,7 +6,6 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <title>Undangan Pernikahan Nila ❤️ Mufti</title>
           <meta
             property="og:title"
             content="Undangan Pernikahan Nila ❤️ Mufti"

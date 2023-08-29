@@ -21,7 +21,11 @@ const lobster = Lobster({
   subsets: ["latin"],
 });
 
-const MainUndangan = () => {
+interface MainProps {
+  own: any;
+}
+
+const MainUndangan: React.FC<MainProps> = ({ own }) => {
   return (
     <>
       <div id="home" className="h-screen bg-red-300 relative">

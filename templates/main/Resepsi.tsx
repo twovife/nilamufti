@@ -61,12 +61,12 @@ const singleAnimation = {
   },
 };
 
-const router = useRouter();
-const { own } = router.query;
-const numbers = own ? parseInt(own as string, 10) : 1;
-
 const Resepsi = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const router = useRouter();
+  const { own } = router.query;
+  const numbers = own ? parseInt(own as string, 10) : 1;
+
   return (
     <>
       <motion.div
